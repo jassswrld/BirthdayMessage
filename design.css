@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Message</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #001147;
+      color: #f0e6df;
+    }
+
+    audio {
+      display: block;
+      margin: 25px auto 15px;
+      filter: invert(1);
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 15px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      margin: 0;
+      color: #f5c1bb;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      font-size: 1em;
+      margin-top: 6px;
+      color: #d7a9a1;
+      font-style: italic;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 30px 15px 60px;
+    }
+
+    .message-box {
+      max-width: 750px;
+      background: #fff7f0;
+      padding: 55px 60px;
+      border-radius: 24px;
+      box-shadow: 0 14px 50px rgba(166, 97, 74, 0.3);
+      line-height: 1.9;
+      font-size: 1.05em;
+      color: #5a4237;
+      border: 1px solid #ddb79c;
+      animation: openLetter 1.2s ease forwards;
+      transform-origin: top center;
+      opacity: 0;
+      transform: scaleY(0.6);
+    }
+
+    .message-box p {
+      margin-bottom: 28px;
+      text-align: justify;
+    }
+
+    .message-box p:not(:last-child)::after {
+      content: "";
+      display: block;
+      width: 35px;
+      height: 2px;
+      background: #ddb79c;
+      margin: 20px auto 0;
+      opacity: 0.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px 10px 30px;
+      font-size: 0.75em;
+      color: #f5c1bb;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+
+    @keyframes openLetter {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.6);
+      }
+
+      60% {
+        opacity: 1;
+        transform: scaleY(1.1);
+      }
+
+      80% {
+        transform: scaleY(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <audio>
